@@ -11,6 +11,9 @@ export function getPostSlugs() {
 
 export function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
+  if (!/^[a-zA-Z0-9-_]+$/.test(realSlug)) {
+    throw new Error("Invalid slug format");
+  }
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
