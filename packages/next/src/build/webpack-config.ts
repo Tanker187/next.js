@@ -793,7 +793,7 @@ export default async function getBaseWebpackConfig(
 
   const transpilePackagesRegex = new RegExp(
     `[/\\\\]node_modules[/\\\\](${finalTranspilePackages
-      ?.map((p) => p.replace(/\//g, '[/\\\\]'))
+      ?.map((p) => escapeStringRegexp(p).replace(/\//g, '[/\\\\]'))
       .join('|')})[/\\\\]`
   )
 
