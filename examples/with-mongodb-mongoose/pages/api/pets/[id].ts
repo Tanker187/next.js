@@ -28,7 +28,14 @@ export default async function handler(
 
     case "PUT" /* Edit a model by its ID */:
       try {
-        const pet = await Pet.findByIdAndUpdate(id, req.body, {
+        const allowedFields = ["name", "age", "species"]; // Define allowed fields
+        const sanitizedBody = Object.keys(req.body)
+          .filter((key) => allowedFields.includes(key))
+          .reduce((obj, key) => {
+            obj[key] = req.body[key];
+            return obj;
+          }, {});
+        const pet = await Pet.findByIdAndUpdate(id, sanitizedBody, {
           new: true,
           runValidators: true,
         });
