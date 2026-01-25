@@ -81,6 +81,9 @@ export async function middleware(request) {
     try {
       const apiRoute = new URL(url)
       apiRoute.pathname = '/api/headers'
+      if (!isValidUrl(apiRoute)) {
+        return serializeError(new Error('Invalid target URL'))
+      }
       const res = await fetch(withLocalIp(apiRoute))
       return serializeData(await res.text())
     } catch (err) {
