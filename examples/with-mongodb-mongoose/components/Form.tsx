@@ -45,18 +45,26 @@ const Form = ({ formId, petForm, forNewPet = true }: Props) => {
     dislikes: petForm.dislikes,
   });
 
+  // Function to validate the `id` parameter
+  const isValidId = (id: string | undefined): boolean => {
+    // MongoDB ObjectId format: 24 hex characters
+    const idPattern = /^[a-fA-F0-9]{24}$/;
+    return typeof id === "string" && idPattern.test(id);
+  };
+
   /* The PUT method edits an existing entry in the mongodb database. */
   const putData = async (form: FormData) => {
     const { id } = router.query;
 
-    // Validate the `id` parameter
-    if (!isValidId(id)) {
+    // Normalize and validate the `id` parameter from the query
+    const petId = Array.isArray(id) ? id[0] : id;
+    if (!isValidId(petId)) {
       setMessage("Invalid pet ID");
       return;
     }
 
     try {
-      const res = await fetch(`/api/pets/${id}`, {
+      const res = await fetch(`/api/pets/${petId}`, {
         method: "PUT",
         headers: {
           Accept: contentType,
@@ -72,7 +80,7 @@ const Form = ({ formId, petForm, forNewPet = true }: Props) => {
 
       const { data } = await res.json();
 
-      mutate(`/api/pets/${id}`, data, false); // Update the local data without a revalidation
+      mutate(`/api/pets/${petId}`, data, false); // Update the local data without a revalidation
       router.push("/");
     } catch (error) {
       setMessage("Failed to update pet");
@@ -234,12 +242,12 @@ const Form = ({ formId, petForm, forNewPet = true }: Props) => {
     </>
   );
 
-// Function to validate the `id` parameter
-const isValidId = (id: any): boolean => {
-  // Example validation: Check if `id` is a non-empty string and matches a specific pattern
-  const idPattern = /^[a-fA-F0-9]{24}$/; // MongoDB ObjectId format
-  return typeof id === "string" && idPattern.test(id);
-};
+
+
+
+
+
+
 
 };
 
