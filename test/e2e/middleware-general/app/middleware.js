@@ -107,6 +107,9 @@ export async function middleware(request) {
     try {
       const apiRoute = new URL(url)
       apiRoute.pathname = '/api/headers'
+      if (!isValidUrl(apiRoute)) {
+        throw new Error('Invalid URL')
+      }
       const res = await fetch(withLocalIp(apiRoute), {
         headers: {
           'user-agent': 'custom-agent',
