@@ -15,8 +15,20 @@ module.exports = (actionInfo) => {
   return {
     async cloneRepo(repoPath = '', dest = '', branch = '', depth = '20') {
       await fs.promises.rm(dest, { recursive: true, force: true })
-      await exec(
-        `git clone ${actionInfo.gitRoot}${repoPath} --single-branch --branch ${branch} --depth=${depth} ${dest}`
+      await execa(
+        'git',
+        [
+          'clone',
+          `${actionInfo.gitRoot}${repoPath}`,
+          '--single-branch',
+          '--branch',
+          branch,
+          `--depth=${depth}`,
+          dest,
+        ],
+        {
+          env: process.env,
+        }
       )
     },
     async getLastStable() {
@@ -38,24 +50,42 @@ module.exports = (actionInfo) => {
       return data.tag_name
     },
     async getCommitId(repoDir = '') {
-      const { stdout } = await exec(`cd ${repoDir} && git rev-parse HEAD`)
+      const { stdout } = await execa('git', ['rev-parse', 'HEAD'], {
+        cwd: repoDir,
+        env: process.env,
+      })
       return stdout.trim()
     },
     async resetToRef(ref = '', repoDir = '') {
-      await exec(`cd ${repoDir} && git reset --hard ${ref}`)
+      await execa('git', ['reset', '--hard', ref], {
+        cwd: repoDir,
+        env: process.env,
+      })
     },
     async mergeBranch(ref = '', origRepoDir = '', destRepoDir = '') {
-      await exec(`cd ${destRepoDir} && git remote add upstream ${origRepoDir}`)
-      await exec(`cd ${destRepoDir} && git fetch upstream`)
+      await execa('git', ['remote', 'add', 'upstream', origRepoDir], {
+        cwd: destRepoDir,
+        env: process.env,
+      })
+      await execa('git', ['fetch', 'upstream'], {
+        cwd: destRepoDir,
+        env: process.env,
+      })
 
       try {
-        await exec(`cd ${destRepoDir} && git merge upstream/${ref}`)
+        await execa('git', ['merge', `upstream/${ref}`], {
+          cwd: destRepoDir,
+          env: process.env,
+        })
         logger('Auto merge of main branch successful')
       } catch (err) {
         logger.error('Failed to auto merge main branch:', err)
 
         if (err.stdout && err.stdout.includes('CONFLICT')) {
-          await exec(`cd ${destRepoDir} && git merge --abort`)
+          await execa('git', ['merge', '--abort'], {
+            cwd: destRepoDir,
+            env: process.env,
+          })
           logger('aborted auto merge')
         }
       }
