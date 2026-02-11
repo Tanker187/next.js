@@ -14,12 +14,11 @@ export default function LocaleSwitcher() {
       <p>Locale switcher:</p>
       <ul>
         {otherLocales.map((locale) => {
-          const { pathname, query, asPath } = router;
+          const { pathname, query } = router;
           return (
             <li key={locale}>
               <Link
                 href={{ pathname, query }}
-                as={asPath}
                 locale={locale}
                 legacyBehavior
               >
