@@ -189,7 +189,9 @@ export async function middleware(request) {
     if (!isValidUrl(url)) {
       return serializeError(new Error('Invalid URL'))
     }
-    const res = await fetch(url)
+    // Only allow subrequests to the same origin to avoid SSRF.
+    const sameOriginUrl = new URL(url.pathname + url.search, request.url)
+    const res = await fetch(sameOriginUrl)
     res.headers.set('x-dynamic-path', 'true')
     return res
   }
