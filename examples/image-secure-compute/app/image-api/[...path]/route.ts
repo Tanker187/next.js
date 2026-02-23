@@ -10,7 +10,13 @@ export async function GET(req: Request) {
   if (!path) {
     return new Response("Bad Request", { status: 400 });
   }
-  const res = await fetch(new URL(path, SOURCE_IMAGE_ORIGIN));
+  // Normalize and validate the requested path to mitigate SSRF-style issues.
+  let normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  // Reject obvious path traversal or unexpected separators.
+  if (normalizedPath.includes("..") || normalizedPath.includes("\\")) {
+    return new Response("Bad Request", { status: 400 });
+  }
+  const res = await fetch(new URL(normalizedPath, SOURCE_IMAGE_ORIGIN));
   const { status, headers, body } = res;
   return new Response(body, { status, headers });
 }
