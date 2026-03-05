@@ -3,6 +3,7 @@ import { Readable } from 'node:stream'
 import { sep, posix } from 'node:path'
 import { pipeline } from 'node:stream/promises'
 import { x } from 'tar'
+import escapeStringRegexp from 'escape-string-regexp'
 
 export type RepoInfo = {
   username: string
@@ -52,8 +53,12 @@ export async function getRepoInfo(
   }
 
   // If examplePath is available, the branch name takes the entire path
+  const escapedFilePath = escapeStringRegexp(filePath)
   const branch = examplePath
-    ? `${_branch}/${file.join('/')}`.replace(new RegExp(`/${filePath}|/$`), '')
+    ? `${_branch}/${file.join('/')}`.replace(
+        new RegExp(`/${escapedFilePath}|/$`),
+        ''
+      )
     : _branch
 
   if (username && name && branch && t === 'tree') {
