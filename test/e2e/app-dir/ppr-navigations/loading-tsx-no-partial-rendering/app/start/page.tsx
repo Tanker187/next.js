@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 export default function Start() {
   const [href, setHref] = useState('')
+  const safeHref = href.startsWith('/') ? href : ''
   return (
     <form>
       <input
@@ -13,7 +14,7 @@ export default function Start() {
         onChange={(e) => setHref(e.target.value)}
         value={href}
       />
-      {href === '' ? null : <Link href={href}>Navigate</Link>}
+      {safeHref === '' ? null : <Link href={safeHref}>Navigate</Link>}
     </form>
   )
 }
