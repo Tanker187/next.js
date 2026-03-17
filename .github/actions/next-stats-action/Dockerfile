@@ -1,6 +1,6 @@
 # syntax=docker.io/docker/dockerfile:1
 
-FROM ubuntu:22.04
+FROM ubuntu:22.04@sha256:445586e41c1de7dfda82d2637f5ff688deea9eb5f5812f8c145afacc35b9f0db
 
 LABEL com.github.actions.name="Next.js PR Stats"
 LABEL com.github.actions.description="Compares stats of a PR with the main branch"
