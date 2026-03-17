@@ -20,14 +20,22 @@ env:
   TURBO_VERSION: 2.3.3
   NODE_LTS_VERSION: 20
 
+permissions:
+  contents: read
+
 jobs:
   start:
     runs-on: ubuntu-latest
 
     environment: release-${{ github.event.inputs.releaseType }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 18
           check-latest: true

@@ -24,6 +24,11 @@ jobs:
       }}
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: send retry request to GitHub API
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -45,8 +50,13 @@ jobs:
       }}
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: send webhook
-        uses: slackapi/slack-github-action@v1.25.0
+        uses: step-security/slack-github-action@77483a1a06c0ce2933c1f2f144fb5a85db7f3e80 # v2.1.1
         with:
           payload: |
             {
