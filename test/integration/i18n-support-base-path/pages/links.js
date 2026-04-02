@@ -4,6 +4,11 @@ import { useRouter } from 'next/router'
 export default function Page(props) {
   const router = useRouter()
   const { nextLocale } = router.query
+  const availableLocales = router.locales || []
+  const safeLocale =
+    availableLocales && availableLocales.includes(nextLocale)
+      ? nextLocale
+      : router.locale || router.defaultLocale
 
   return (
     <>
@@ -15,17 +20,17 @@ export default function Page(props) {
       <p id="router-query">{JSON.stringify(router.query)}</p>
       <p id="router-pathname">{router.pathname}</p>
       <p id="router-as-path">{router.asPath}</p>
-      <Link href="/another" locale={nextLocale} id="to-another">
+      <Link href="/another" locale={safeLocale} id="to-another">
         to /another
       </Link>
       <br />
-      <Link href="/gsp" locale={nextLocale} id="to-gsp">
+      <Link href="/gsp" locale={safeLocale} id="to-gsp">
         to /gsp
       </Link>
       <br />
       <Link
         href="/gsp/fallback/first"
-        locale={nextLocale}
+        locale={safeLocale}
         id="to-fallback-first"
       >
         to /gsp/fallback/first
@@ -33,7 +38,7 @@ export default function Page(props) {
       <br />
       <Link
         href="/gsp/fallback/hello"
-        locale={nextLocale}
+        locale={safeLocale}
         id="to-fallback-hello"
       >
         to /gsp/fallback/hello
@@ -41,17 +46,17 @@ export default function Page(props) {
       <br />
       <Link
         href="/gsp/no-fallback/first"
-        locale={nextLocale}
+        locale={safeLocale}
         id="to-no-fallback-first"
       >
         to /gsp/no-fallback/first
       </Link>
       <br />
-      <Link href="/gssp" locale={nextLocale} id="to-gssp">
+      <Link href="/gssp" locale={safeLocale} id="to-gssp">
         to /gssp
       </Link>
       <br />
-      <Link href="/gssp/first" locale={nextLocale} id="to-gssp-slug">
+      <Link href="/gssp/first" locale={safeLocale} id="to-gssp-slug">
         to /gssp/first
       </Link>
       <br />
