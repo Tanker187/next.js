@@ -286,8 +286,8 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3
       semver:
-        specifier: ^7.1.1
-        version: 7.3.8
+        specifier: ^7.5.2
+        version: 7.5.2
       sequelize:
         specifier: ^5.9.3
         version: 5.22.5
@@ -8048,16 +8048,16 @@ packages:
     resolution: {integrity: sha512-VyFUffiBx8hABJ9HYSTXLRwyZtdDHMzMtFmID1aiNAD2BZppBmJm0Hqw3p2jkgxP9BNt1pQ9RnC49P0EcXf6cA==}
     hasBin: true
 
-  semver@5.7.1:
-    resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
+  semver@5.7.2:
+    resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
 
-  semver@6.3.0:
-    resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
+  semver@6.3.1:
+    resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.3.8:
-    resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
+  semver@7.5.2:
+    resolution: {integrity: sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -10175,7 +10175,7 @@ snapshots:
       debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.1
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -10198,7 +10198,7 @@ snapshots:
       '@babel/core': 7.19.6
       '@babel/helper-validator-option': 7.18.6
       browserslist: 4.21.4
-      semver: 6.3.0
+      semver: 6.3.1
 
   '@babel/helper-environment-visitor@7.18.9': {}
 
@@ -10437,7 +10437,7 @@ snapshots:
   '@financial-times/polyfill-useragent-normaliser@1.10.2':
     dependencies:
       '@financial-times/useragent_parser': 1.6.3
-      semver: 7.3.8
+      semver: 7.5.2
 
   '@financial-times/useragent_parser@1.6.3': {}
 
@@ -11245,7 +11245,7 @@ snapshots:
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
-      semver: 7.3.8
+      semver: 7.5.2
       tar: 6.1.11
     transitivePeerDependencies:
       - encoding
@@ -11318,7 +11318,7 @@ snapshots:
   '@npmcli/fs@1.1.1':
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.3.8
+      semver: 7.5.2
     optional: true
 
   '@npmcli/move-file@1.1.2':
@@ -13894,7 +13894,7 @@ snapshots:
       lodash: 4.17.21
       p-timeout: 3.2.0
       promise.prototype.finally: 3.1.3
-      semver: 7.3.8
+      semver: 7.5.2
       util.promisify: 1.1.1
       uuid: 8.3.2
     transitivePeerDependencies:
@@ -13908,7 +13908,7 @@ snapshots:
       ioredis: 5.2.3
       lodash: 4.17.21
       msgpackr: 1.7.2
-      semver: 7.3.8
+      semver: 7.5.2
       tslib: 2.4.0
       uuid: 9.0.0
     transitivePeerDependencies:
@@ -14533,7 +14533,7 @@ snapshots:
     dependencies:
       nice-try: 1.0.5
       path-key: 2.0.1
-      semver: 5.7.1
+      semver: 5.7.2
       shebang-command: 1.2.0
       which: 1.3.1
 
@@ -16829,7 +16829,7 @@ snapshots:
       '@babel/parser': 7.19.6
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.0
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -17190,7 +17190,7 @@ snapshots:
       jest-util: 27.5.1
       natural-compare: 1.4.0
       pretty-format: 27.5.1
-      semver: 7.3.8
+      semver: 7.5.2
     transitivePeerDependencies:
       - supports-color
 
@@ -17378,7 +17378,7 @@ snapshots:
       canonicalize: 1.0.8
       rdf-canonize: 1.2.0
       request: 2.88.2
-      semver: 5.7.1
+      semver: 5.7.2
       xmldom: 0.1.19
 
   jsonlint-mod@1.7.6:
@@ -17408,7 +17408,7 @@ snapshots:
       lodash.isstring: 4.0.1
       lodash.once: 4.1.1
       ms: 2.1.3
-      semver: 5.7.1
+      semver: 5.7.2
 
   jsprim@1.4.2:
     dependencies:
@@ -17630,7 +17630,7 @@ snapshots:
       raven: 2.6.4
       rimraf: 2.7.1
       robots-parser: 2.4.0
-      semver: 5.7.1
+      semver: 5.7.2
       speedline-core: 1.4.2
       third-party-web: 0.11.1
       update-notifier: 2.5.0
@@ -17877,7 +17877,7 @@ snapshots:
 
   make-dir@3.1.0:
     dependencies:
-      semver: 6.3.0
+      semver: 6.3.1
 
   make-error@1.3.6: {}
 
@@ -18622,7 +18622,7 @@ snapshots:
 
   node-abi@3.28.0:
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.2
 
   node-addon-api@3.2.1: {}
 
@@ -18664,7 +18664,7 @@ snapshots:
       nopt: 5.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
-      semver: 7.3.8
+      semver: 7.5.2
       tar: 6.1.11
       which: 2.0.2
     transitivePeerDependencies:
@@ -18930,7 +18930,7 @@ snapshots:
       got: 6.7.1
       registry-auth-token: 3.4.0
       registry-url: 3.1.0
-      semver: 5.7.1
+      semver: 5.7.2
 
   packet-reader@1.0.0: {}
 
@@ -19609,7 +19609,7 @@ snapshots:
   rdf-canonize@1.2.0:
     dependencies:
       node-forge: 0.10.0
-      semver: 6.3.0
+      semver: 6.3.1
 
   rdf-ext@1.3.5:
     dependencies:
@@ -19996,15 +19996,15 @@ snapshots:
 
   semver-diff@2.1.0:
     dependencies:
-      semver: 5.7.1
+      semver: 5.7.2
 
   semver@4.3.2: {}
 
-  semver@5.7.1: {}
+  semver@5.7.2: {}
 
-  semver@6.3.0: {}
+  semver@6.3.1: {}
 
-  semver@7.3.8:
+  semver@7.5.2:
     dependencies:
       lru-cache: 6.0.0
 
@@ -20047,7 +20047,7 @@ snapshots:
       moment: 2.29.4
       moment-timezone: 0.5.38
       retry-as-promised: 3.2.0
-      semver: 6.3.0
+      semver: 6.3.1
       sequelize-pool: 2.3.0
       toposort-class: 1.0.1
       uuid: 8.3.2
@@ -20114,7 +20114,7 @@ snapshots:
       detect-libc: 2.0.1
       node-addon-api: 5.0.0
       prebuild-install: 7.1.1
-      semver: 7.3.8
+      semver: 7.5.2
       simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
@@ -20723,7 +20723,7 @@ snapshots:
       mime: 2.6.0
       qs: 6.11.0
       readable-stream: 3.6.0
-      semver: 7.3.8
+      semver: 7.5.2
     transitivePeerDependencies:
       - supports-color
 
