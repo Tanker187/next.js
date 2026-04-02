@@ -116,7 +116,7 @@ importers:
         version: 3.8.3(encoding@0.1.13)
       consolidate:
         specifier: ^0.15.1
-        version: 0.15.1(coffee-script@1.12.7)(ejs@3.1.8)(lodash@4.17.23)(pug@3.0.2)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)(swig@1.4.2)(underscore@1.13.6)
+        version: 0.15.1(coffee-script@1.12.7)(ejs@3.1.8)(lodash@4.18.1)(pug@3.0.2)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)(swig@1.4.2)(underscore@1.13.6)
       copy:
         specifier: ^0.3.2
         version: 0.3.2
@@ -301,8 +301,8 @@ importers:
         specifier: ^2.2.0
         version: 2.5.0
       sqlite3:
-        specifier: ^5.0.8
-        version: 5.1.2(encoding@0.1.13)
+        specifier: ^5.1.5
+        version: 5.1.5(encoding@0.1.13)
       stripe:
         specifier: ^7.4.0
         version: 7.63.1
@@ -1261,6 +1261,10 @@ packages:
 
   '@mapbox/node-pre-gyp@1.0.10':
     resolution: {integrity: sha512-4ySo4CjzStuprMwk35H5pPbkymjv1SF3jGLj6rAHp/xT/RF7TL7bd9CTm1xDY49K2qF7jmR/g7k+SkLETP6opA==}
+    hasBin: true
+
+  '@mapbox/node-pre-gyp@1.0.11':
+    resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
     hasBin: true
 
   '@mdx-js/mdx@2.2.1':
@@ -2322,8 +2326,8 @@ packages:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
 
-  agentkeepalive@4.2.1:
-    resolution: {integrity: sha512-Zn4cw2NEqd+9fiSVWMscnjyQ1a8Yfoc5oBajLeo5w+YBHgDUcEBY2hS4YpTz6iN5f/2zQiktcuM6tS8x1p9dpA==}
+  agentkeepalive@4.6.0:
+    resolution: {integrity: sha512-kja8j7PjmncONqaTsB8fQ+wE2mSU2DJ9D4XKoJ5PFWIdRMa6SLSN1ff4mOr4jCbfRSsxR4keIiySJU0N9T5hIQ==}
     engines: {node: '>= 8.0.0'}
 
   aggregate-error@3.1.0:
@@ -2488,8 +2492,8 @@ packages:
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
 
-  aproba@2.0.0:
-    resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==}
+  aproba@2.1.0:
+    resolution: {integrity: sha512-tLIEcj5GuR2RSTnxNKdkK0dJ/GrC7P38sUkiDmDuHfsHmbagTFAxDVIBltoklXEVIQ/f14IL8IMJ5pn9Hez1Ew==}
 
   are-we-there-yet@2.0.0:
     resolution: {integrity: sha512-Ci/qENmwHnsYo9xKIcUJN5LeDKdJ6R1Z1j9V/J5wyq8nh/mYPEpIKJbBZXtZjG04HiK7zV/p6Vs9952MrMeUIw==}
@@ -3824,6 +3828,10 @@ packages:
     resolution: {integrity: sha512-463v3ZeIrcWtdgIg6vI6XUncguvr2TnGl4SzDXinkt9mSLpBJKXT3mW6xT3VQdDN11+WVs29pgvivTc4Lp8v+w==}
     engines: {node: '>=8'}
 
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
+    engines: {node: '>=8'}
+
   detect-newline@3.1.0:
     resolution: {integrity: sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==}
     engines: {node: '>=8'}
@@ -4773,6 +4781,9 @@ packages:
   graceful-fs@4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
 
+  graceful-fs@4.2.11:
+    resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+
   graphql-extensions@0.16.0:
     resolution: {integrity: sha512-rZQc/USoEIw437BGRUwoHoLPR1LA791Ltj6axONqgKIyyx2sqIO3YT9kTbB/eIUdJBrCozp4KuUeZ09xKeQDxg==}
     engines: {node: '>=6.0'}
@@ -4964,6 +4975,9 @@ packages:
 
   http-cache-semantics@4.1.0:
     resolution: {integrity: sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==}
+
+  http-cache-semantics@4.2.0:
+    resolution: {integrity: sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ==}
 
   http-errors@1.8.1:
     resolution: {integrity: sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==}
@@ -6107,8 +6121,8 @@ packages:
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
-  lodash@4.17.23:
-    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
   log-ok@0.1.1:
     resolution: {integrity: sha512-cc8VrkS6C+9TFuYAwuHpshrcrGRAv7d0tUJ0GdM72ZBlKXtlgjUZF84O+OhQUdiVHoF7U/nVxwpjOdwUJ8d3Vg==}
@@ -6504,8 +6518,8 @@ packages:
     resolution: {integrity: sha512-CGH1eblLq26Y15+Azk7ey4xh0J/XfJfrCox5LDJiKqI2Q2iwOLOKrlmIaODiSQS8d18jalF6y2K2ePUm0CmShw==}
     engines: {node: '>=8'}
 
-  minipass-flush@1.0.5:
-    resolution: {integrity: sha512-JmQSYYpPUqX5Jyn1mXaRwOda1uQ8HP5KAT/oDSLCzt1BYRhQU0/hDtsB1ufZfEEzMZ9aAVmsBw8+FWsIXlClWw==}
+  minipass-flush@1.0.7:
+    resolution: {integrity: sha512-TbqTz9cUwWyHS2Dy89P3ocAGUGxKjjLuR9z8w4WUTGAVgEj17/4nhgo2Du56i0Fm3Pm30g4iA8Lcqctc76jCzA==}
     engines: {node: '>= 8'}
 
   minipass-pipeline@1.2.4:
@@ -6516,8 +6530,12 @@ packages:
     resolution: {integrity: sha512-MbkQQ2CTiBMlA2Dm/5cY+9SWFEN8pzzOXi6rlM5Xxq0Yqbda5ZQy9sU75a673FE9ZK0Zsbr6Y5iP6u9nktfg2g==}
     engines: {node: '>=8'}
 
-  minipass@3.3.4:
-    resolution: {integrity: sha512-I9WPbWHCGu8W+6k1ZiGpPu0GkoKBeorkfKNuAFBNS1HNFJvke82sxvI5bzcCNpWPorkOO5QQ+zomzzwRxejXiw==}
+  minipass@3.3.6:
+    resolution: {integrity: sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==}
+    engines: {node: '>=8'}
+
+  minipass@5.0.0:
+    resolution: {integrity: sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==}
     engines: {node: '>=8'}
 
   minizlib@2.1.2:
@@ -6664,6 +6682,10 @@ packages:
 
   negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
+    engines: {node: '>= 0.6'}
+
+  negotiator@0.6.4:
+    resolution: {integrity: sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==}
     engines: {node: '>= 0.6'}
 
   next-tick@1.1.0:
@@ -8052,8 +8074,16 @@ packages:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
 
+  semver@5.7.2:
+    resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
+    hasBin: true
+
   semver@6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
+    hasBin: true
+
+  semver@6.3.1:
+    resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
   semver@7.3.8:
@@ -8309,8 +8339,8 @@ packages:
   sprintf-js@1.1.2:
     resolution: {integrity: sha512-VE0SOVEHCk7Qc8ulkWw3ntAzXuqf7S2lvwQaDLRnUeIEaKNQJzV6BwmLKhOqT61aGhfUMrXeaBk+oDGCzvhcug==}
 
-  sqlite3@5.1.2:
-    resolution: {integrity: sha512-D0Reg6pRWAFXFUnZKsszCI67tthFD8fGPewRddDCX6w4cYwz3MbvuwRICbL+YQjBAh9zbw+lJ/V9oC8nG5j6eg==}
+  sqlite3@5.1.5:
+    resolution: {integrity: sha512-7sP16i4wI+yKnGOO2q2ijze7EjQ9US+Vw7DYYwxfFtqNZDGgBcEw0oeDaDvUTq66uJOzVd/z6MkIg+c9erSJKg==}
 
   sqlstring@2.3.1:
     resolution: {integrity: sha512-ooAzh/7dxIG5+uDik1z/Rd1vli0+38izZhGzSa34FwR7IbelPWCCKSNIl8jlL/F7ERvy8CB2jNeM1E9i9mXMAQ==}
@@ -8601,9 +8631,9 @@ packages:
     resolution: {integrity: sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==}
     engines: {node: '>=6'}
 
-  tar@6.1.11:
-    resolution: {integrity: sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==}
-    engines: {node: '>= 10'}
+  tar@6.2.1:
+    resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
+    engines: {node: '>=10'}
     deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   teeny-request@6.0.3:
@@ -10175,7 +10205,7 @@ snapshots:
       debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.1
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -10198,7 +10228,7 @@ snapshots:
       '@babel/core': 7.19.6
       '@babel/helper-validator-option': 7.18.6
       browserslist: 4.21.4
-      semver: 6.3.0
+      semver: 6.3.1
 
   '@babel/helper-environment-visitor@7.18.9': {}
 
@@ -10953,7 +10983,7 @@ snapshots:
   '@jest/source-map@27.5.1':
     dependencies:
       callsites: 3.1.0
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       source-map: 0.6.1
 
   '@jest/test-result@27.5.1':
@@ -10966,7 +10996,7 @@ snapshots:
   '@jest/test-sequencer@27.5.1':
     dependencies:
       '@jest/test-result': 27.5.1
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jest-haste-map: 27.5.1
       jest-runtime: 27.5.1
     transitivePeerDependencies:
@@ -11246,7 +11276,22 @@ snapshots:
       npmlog: 5.0.1
       rimraf: 3.0.2
       semver: 7.3.8
-      tar: 6.1.11
+      tar: 6.2.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  '@mapbox/node-pre-gyp@1.0.11(encoding@0.1.13)':
+    dependencies:
+      detect-libc: 2.1.2
+      https-proxy-agent: 5.0.1
+      make-dir: 3.1.0
+      node-fetch: 2.7.0(encoding@0.1.13)
+      nopt: 5.0.0
+      npmlog: 5.0.1
+      rimraf: 3.0.2
+      semver: 7.3.8
+      tar: 6.2.1
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -13071,13 +13116,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  agentkeepalive@4.2.1:
+  agentkeepalive@4.6.0:
     dependencies:
-      debug: 4.3.4
-      depd: 1.1.2
       humanize-ms: 1.2.1
-    transitivePeerDependencies:
-      - supports-color
     optional: true
 
   aggregate-error@3.1.0:
@@ -13239,7 +13280,7 @@ snapshots:
 
   apollo-server-env@3.2.0(encoding@0.1.13):
     dependencies:
-      node-fetch: 2.6.12(encoding@0.1.13)
+      node-fetch: 2.7.0(encoding@0.1.13)
       util.promisify: 1.1.1
     transitivePeerDependencies:
       - encoding
@@ -13306,17 +13347,17 @@ snapshots:
       ts-invariant: 0.4.4
       tslib: 1.14.1
 
-  aproba@2.0.0: {}
+  aproba@2.1.0: {}
 
   are-we-there-yet@2.0.0:
     dependencies:
       delegates: 1.0.0
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
 
   are-we-there-yet@3.0.1:
     dependencies:
       delegates: 1.0.0
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     optional: true
 
   arg@4.1.3: {}
@@ -13498,7 +13539,7 @@ snapshots:
       babel-plugin-istanbul: 6.1.1
       babel-preset-jest: 27.5.1(@babel/core@7.19.6)
       chalk: 4.1.2
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       slash: 3.0.0
     transitivePeerDependencies:
       - supports-color
@@ -13931,16 +13972,16 @@ snapshots:
       glob: 7.2.3
       infer-owner: 1.0.4
       lru-cache: 6.0.0
-      minipass: 3.3.4
+      minipass: 3.3.6
       minipass-collect: 1.0.2
-      minipass-flush: 1.0.5
+      minipass-flush: 1.0.7
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
       promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
-      tar: 6.1.11
+      tar: 6.2.1
       unique-filename: 1.1.1
     transitivePeerDependencies:
       - bluebird
@@ -14376,7 +14417,7 @@ snapshots:
   configstore@5.0.1:
     dependencies:
       dot-prop: 5.3.0
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       make-dir: 3.1.0
       unique-string: 2.0.0
       write-file-atomic: 3.0.3
@@ -14389,13 +14430,13 @@ snapshots:
 
   console-control-strings@1.1.0: {}
 
-  consolidate@0.15.1(coffee-script@1.12.7)(ejs@3.1.8)(lodash@4.17.23)(pug@3.0.2)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)(swig@1.4.2)(underscore@1.13.6):
+  consolidate@0.15.1(coffee-script@1.12.7)(ejs@3.1.8)(lodash@4.18.1)(pug@3.0.2)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)(swig@1.4.2)(underscore@1.13.6):
     dependencies:
       bluebird: 3.7.2
     optionalDependencies:
       coffee-script: 1.12.7
       ejs: 3.1.8
-      lodash: 4.17.23
+      lodash: 4.18.1
       pug: 3.0.2
       react: 16.14.0
       react-dom: 16.14.0(react@16.14.0)
@@ -14533,7 +14574,7 @@ snapshots:
     dependencies:
       nice-try: 1.0.5
       path-key: 2.0.1
-      semver: 5.7.1
+      semver: 5.7.2
       shebang-command: 1.2.0
       which: 1.3.1
 
@@ -14759,6 +14800,8 @@ snapshots:
   details-element-polyfill@2.4.0: {}
 
   detect-libc@2.0.1: {}
+
+  detect-libc@2.1.2: {}
 
   detect-newline@3.1.0: {}
 
@@ -15498,7 +15541,7 @@ snapshots:
 
   file-stat@0.1.3:
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       lazy-cache: 0.2.7
       through2: 2.0.5
 
@@ -15685,13 +15728,13 @@ snapshots:
 
   fs-extra@10.1.0:
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.0
 
   fs-minipass@2.1.0:
     dependencies:
-      minipass: 3.3.4
+      minipass: 3.3.6
 
   fs-plus@3.1.1:
     dependencies:
@@ -15726,7 +15769,7 @@ snapshots:
 
   gauge@3.0.2:
     dependencies:
-      aproba: 2.0.0
+      aproba: 2.1.0
       color-support: 1.1.3
       console-control-strings: 1.1.0
       has-unicode: 2.0.1
@@ -15738,7 +15781,7 @@ snapshots:
 
   gauge@4.0.4:
     dependencies:
-      aproba: 2.0.0
+      aproba: 2.1.0
       color-support: 1.1.3
       console-control-strings: 1.1.0
       has-unicode: 2.0.1
@@ -15754,7 +15797,7 @@ snapshots:
       extend: 3.0.2
       https-proxy-agent: 5.0.1
       is-stream: 2.0.1
-      node-fetch: 2.6.12(encoding@0.1.13)
+      node-fetch: 2.7.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -15765,7 +15808,7 @@ snapshots:
       extend: 3.0.2
       https-proxy-agent: 5.0.1
       is-stream: 2.0.1
-      node-fetch: 2.6.12(encoding@0.1.13)
+      node-fetch: 2.7.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -16037,6 +16080,8 @@ snapshots:
 
   graceful-fs@4.2.10: {}
 
+  graceful-fs@4.2.11: {}
+
   graphql-extensions@0.16.0(encoding@0.1.13)(graphql@14.7.0):
     dependencies:
       '@apollographql/apollo-tools': 0.5.4(graphql@14.7.0)
@@ -16263,6 +16308,9 @@ snapshots:
   http-cache-semantics@3.8.1: {}
 
   http-cache-semantics@4.1.0: {}
+
+  http-cache-semantics@4.2.0:
+    optional: true
 
   http-errors@1.8.1:
     dependencies:
@@ -16829,7 +16877,7 @@ snapshots:
       '@babel/parser': 7.19.6
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.0
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -17165,7 +17213,7 @@ snapshots:
   jest-serializer@27.5.1:
     dependencies:
       '@types/node': 14.18.29
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
 
   jest-snapshot@27.5.1:
     dependencies:
@@ -17369,7 +17417,7 @@ snapshots:
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
 
   jsonify@0.0.1: {}
 
@@ -17722,7 +17770,7 @@ snapshots:
 
   lodash@4.17.21: {}
 
-  lodash@4.17.23: {}
+  lodash@4.18.1: {}
 
   log-ok@0.1.1:
     dependencies:
@@ -17877,25 +17925,25 @@ snapshots:
 
   make-dir@3.1.0:
     dependencies:
-      semver: 6.3.0
+      semver: 6.3.1
 
   make-error@1.3.6: {}
 
   make-fetch-happen@9.1.0:
     dependencies:
-      agentkeepalive: 4.2.1
+      agentkeepalive: 4.6.0
       cacache: 15.3.0
-      http-cache-semantics: 4.1.0
+      http-cache-semantics: 4.2.0
       http-proxy-agent: 4.0.1
       https-proxy-agent: 5.0.1
       is-lambda: 1.0.1
       lru-cache: 6.0.0
-      minipass: 3.3.4
+      minipass: 3.3.6
       minipass-collect: 1.0.2
       minipass-fetch: 1.4.1
-      minipass-flush: 1.0.5
+      minipass-flush: 1.0.7
       minipass-pipeline: 1.2.4
-      negotiator: 0.6.3
+      negotiator: 0.6.4
       promise-retry: 2.0.1
       socks-proxy-agent: 6.2.1
       ssri: 8.0.1
@@ -18363,40 +18411,42 @@ snapshots:
 
   minipass-collect@1.0.2:
     dependencies:
-      minipass: 3.3.4
+      minipass: 3.3.6
     optional: true
 
   minipass-fetch@1.4.1:
     dependencies:
-      minipass: 3.3.4
+      minipass: 3.3.6
       minipass-sized: 1.0.3
       minizlib: 2.1.2
     optionalDependencies:
       encoding: 0.1.13
     optional: true
 
-  minipass-flush@1.0.5:
+  minipass-flush@1.0.7:
     dependencies:
-      minipass: 3.3.4
+      minipass: 3.3.6
     optional: true
 
   minipass-pipeline@1.2.4:
     dependencies:
-      minipass: 3.3.4
+      minipass: 3.3.6
     optional: true
 
   minipass-sized@1.0.3:
     dependencies:
-      minipass: 3.3.4
+      minipass: 3.3.6
     optional: true
 
-  minipass@3.3.4:
+  minipass@3.3.6:
     dependencies:
       yallist: 4.0.0
 
+  minipass@5.0.0: {}
+
   minizlib@2.1.2:
     dependencies:
-      minipass: 3.3.4
+      minipass: 3.3.6
       yallist: 4.0.0
 
   mixin-deep@1.3.2:
@@ -18610,6 +18660,9 @@ snapshots:
 
   negotiator@0.6.3: {}
 
+  negotiator@0.6.4:
+    optional: true
+
   next-tick@1.1.0: {}
 
   nice-napi@1.0.2:
@@ -18659,13 +18712,13 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       glob: 7.2.3
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       make-fetch-happen: 9.1.0
       nopt: 5.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
       semver: 7.3.8
-      tar: 6.1.11
+      tar: 6.2.1
       which: 2.0.2
     transitivePeerDependencies:
       - bluebird
@@ -18930,7 +18983,7 @@ snapshots:
       got: 6.7.1
       registry-auth-token: 3.4.0
       registry-url: 3.1.0
-      semver: 5.7.1
+      semver: 5.7.2
 
   packet-reader@1.0.0: {}
 
@@ -19609,7 +19662,7 @@ snapshots:
   rdf-canonize@1.2.0:
     dependencies:
       node-forge: 0.10.0
-      semver: 6.3.0
+      semver: 6.3.1
 
   rdf-ext@1.3.5:
     dependencies:
@@ -19694,7 +19747,7 @@ snapshots:
 
   readdirp@2.2.1:
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       micromatch: 3.1.10
       readable-stream: 2.3.7
     transitivePeerDependencies:
@@ -20002,7 +20055,11 @@ snapshots:
 
   semver@5.7.1: {}
 
+  semver@5.7.2: {}
+
   semver@6.3.0: {}
+
+  semver@6.3.1: {}
 
   semver@7.3.8:
     dependencies:
@@ -20327,7 +20384,7 @@ snapshots:
       '@rdfjs/to-ntriples': 1.0.2
       get-stream: 5.2.0
       jsonstream2: 3.0.0
-      lodash: 4.17.23
+      lodash: 4.18.1
       nodeify-fetch: 2.2.2(encoding@0.1.13)
       promise-the-world: 1.0.1
       rdf-transform-triple-to-quad: 1.0.2
@@ -20367,11 +20424,11 @@ snapshots:
 
   sprintf-js@1.1.2: {}
 
-  sqlite3@5.1.2(encoding@0.1.13):
+  sqlite3@5.1.5(encoding@0.1.13):
     dependencies:
-      '@mapbox/node-pre-gyp': 1.0.10(encoding@0.1.13)
+      '@mapbox/node-pre-gyp': 1.0.11(encoding@0.1.13)
       node-addon-api: 4.3.0
-      tar: 6.1.11
+      tar: 6.2.1
     optionalDependencies:
       node-gyp: 8.4.1
     transitivePeerDependencies:
@@ -20399,7 +20456,7 @@ snapshots:
 
   ssri@8.0.1:
     dependencies:
-      minipass: 3.3.4
+      minipass: 3.3.6
     optional: true
 
   stable@0.1.8: {}
@@ -20779,11 +20836,11 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.0
 
-  tar@6.1.11:
+  tar@6.2.1:
     dependencies:
       chownr: 2.0.0
       fs-minipass: 2.1.0
-      minipass: 3.3.4
+      minipass: 5.0.0
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
@@ -20814,7 +20871,7 @@ snapshots:
     dependencies:
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
-      node-fetch: 2.6.12(encoding@0.1.13)
+      node-fetch: 2.7.0(encoding@0.1.13)
       stream-events: 1.0.5
       uuid: 8.3.2
     transitivePeerDependencies:
