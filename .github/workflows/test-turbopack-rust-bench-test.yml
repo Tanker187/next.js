@@ -23,6 +23,11 @@ jobs:
     name: Test
     runs-on: ${{ fromJSON(inputs.runner) }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Set git to use LF
         run: |
           git config --global core.autocrlf false
@@ -30,13 +35,13 @@ jobs:
         if: inputs.os == 'windows'
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
 
       - name: Setup Rust
         uses: ./.github/actions/setup-rust
 
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: ${{ env.NODE_LTS_VERSION }}
           check-latest: true

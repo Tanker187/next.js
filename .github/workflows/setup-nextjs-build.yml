@@ -20,17 +20,22 @@ jobs:
     outputs:
       output1: ${{ steps.build-next-swc-turbopack-patch.outputs.success }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: ${{ inputs.nodeVersion || env.NODE_LTS_VERSION }}
           check-latest: true
       - name: Get number of CPU cores
-        uses: SimenB/github-actions-cpu-cores@v2
+        uses: SimenB/github-actions-cpu-cores@97ba232459a8e02ff6121db9362b09661c875ab8 # v2.0.0
         id: cpu-cores
 
       - name: 'Setup Rust toolchain'
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@631a55b12751854ce901bb631d5902ceb48146f7 # stable
 
       - name: Display runner information
         run: echo runner cpu count ${{ steps.cpu-cores.outputs.count }}
@@ -54,24 +59,24 @@ jobs:
         run: sudo ethtool -K eth0 tx off rx off
 
       - name: Checkout Next.js
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           repository: vercel/next.js
           ref: ${{ env.NEXTJS_VERSION }}
 
       - name: Checkout failed test lists
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           repository: vercel/turbo
           ref: nextjs-integration-test-data
           path: integration-test-data
 
       - name: Download binary
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           path: artifacts
 
-      - uses: actions/cache/restore@v3
+      - uses: actions/cache/restore@6f8efc29b200d32929f49075959781ed54ec270c # v3.5.0
         id: restore-build
         with:
           path: |
@@ -116,7 +121,7 @@ jobs:
       # it is too heavyweight for the purpose since we do not need to persist
       # the cache across multiple runs.
       - name: Store next.js build cache with next-swc
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@6f8efc29b200d32929f49075959781ed54ec270c # v3.5.0
         id: cache-build
         with:
           path: |

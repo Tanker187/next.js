@@ -9,7 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'release' }}
     steps:
-      - uses: actions/github-script@v7
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
+      - uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
         id: notify-new-release
         with:
           result-encoding: string
@@ -32,7 +37,12 @@ jobs:
   front-sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
       - id: nextPackageInfo
         name: Get `next` package info
         run: |
@@ -49,7 +59,7 @@ jobs:
         run: gh auth status
         env:
           GITHUB_TOKEN: ${{ secrets.FRONT_TEST_TOKEN }}
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
         name: Trigger vercel/front sync
         id: trigger-front-sync
         with:

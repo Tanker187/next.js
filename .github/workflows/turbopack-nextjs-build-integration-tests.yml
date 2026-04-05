@@ -67,12 +67,17 @@ jobs:
         group: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 18.18.2
           check-latest: true
-      - uses: actions/cache/restore@v3
+      - uses: actions/cache/restore@6f8efc29b200d32929f49075959781ed54ec270c # v3.5.0
         id: restore-build
         with:
           path: ./*
@@ -95,7 +100,7 @@ jobs:
         continue-on-error: true
 
       - name: Upload test report artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: test-reports-start-${{ matrix.group }}
           if-no-files-found: 'error'
@@ -118,12 +123,17 @@ jobs:
         group: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 18.18.2
           check-latest: true
-      - uses: actions/cache/restore@v3
+      - uses: actions/cache/restore@6f8efc29b200d32929f49075959781ed54ec270c # v3.5.0
         id: restore-build
         with:
           path: ./*
@@ -145,7 +155,7 @@ jobs:
         continue-on-error: true
 
       - name: Upload test report artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: test-reports-build-integration-${{ matrix.group }}
           if-no-files-found: 'error'
@@ -167,8 +177,13 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
       - name: Collect integration test stat
         uses: ./.github/actions/next-integration-stat
@@ -176,7 +191,7 @@ jobs:
           diff_base: ${{ inputs.diff_base || 'none' }}
 
       - name: Store artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: test-results-turbopack-production
           path: |
@@ -195,9 +210,14 @@ jobs:
 
     if: ${{ !cancelled() }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Download test report artifacts
         id: download-test-reports
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: test-reports-*
           path: test/reports
