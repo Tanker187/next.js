@@ -343,7 +343,7 @@
     "webpack": "5.96.1",
     "webpack-sources1": "npm:webpack-sources@1.4.3",
     "webpack-sources3": "npm:webpack-sources@3.2.3",
-    "ws": "8.2.3",
+    "ws": "8.20.1",
     "zod": "3.22.3",
     "zod-validation-error": "3.4.0"
   },
