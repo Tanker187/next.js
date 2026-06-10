@@ -236,7 +236,7 @@
     "scheduler-experimental-builtin": "npm:scheduler@0.0.0-experimental-5b51a2b9-20250116",
     "seedrandom": "3.0.5",
     "semver": "7.3.7",
-    "shell-quote": "1.7.3",
+    "shell-quote": "1.8.4",
     "strip-ansi": "6.0.0",
     "styled-components": "6.0.0-rc.3",
     "styled-jsx": "5.1.6",
