@@ -154,7 +154,7 @@
     "@babel/preset-typescript": "7.22.5",
     "@babel/runtime": "7.22.5",
     "@babel/traverse": "7.22.5",
-    "@babel/types": "7.22.5",
+    "@babel/types": "8.0.4",
     "@capsizecss/metrics": "3.4.0",
     "@chromatic-com/storybook": "^3.2.2",
     "@edge-runtime/cookies": "6.0.0",
