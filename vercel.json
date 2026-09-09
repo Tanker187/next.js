@@ -2,5 +2,6 @@
   "github": {
     "silent": true,
     "autoJobCancelation": true
-  }
+  },
+  "installCommand": "corepack enable && corepack prepare pnpm@9.6.0 --activate && pnpm install"
 }
